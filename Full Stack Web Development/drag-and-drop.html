@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and drop</title>
+    <style>
+        #dragItem{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: aquamarine;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+
+         #dropItem{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: aquamarine;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 20px;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Draggable ek perchai ki thera -->
+    <div id="dragItem" draggable="true">Drag me</div>
+    <div id="dropItem">Drop Here</div>
+    <script>
+         const dragItem = document.getElementById("dragItem")
+         const dropItem = document.getElementById("dropItem")
+
+         dragItem.addEventListener('dragstart', function (event){
+            event.dataTransfer.setData('text/plain', 'dragItem')
+         })
+
+         dropItem.addEventListener('dragover', function (event){
+            event.preventDefault()
+         })
+
+         dropItem.addEventListener('drop', function (event){
+            event.preventDefault();
+            dropItem.textContent = "Drag me!"
+         })
+
+    </script>
+</body>
+</html>
