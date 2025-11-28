@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic</title>
+    <style>
+        canvas{
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Canvas Setup -->
+
+    <h1> Canvas Demo</h1>
+    <canvas id="myCanvas" width="400" height="300px"></canvas>
+
+<script>
+    const canvas = document.getElementById("myCanvas");
+    const cant = canvas.getContext("2d");
+    //Rectangle
+    cant.fillStyle= "#000";
+    cant.fillRect(20,30,150,80);
+
+    cant.strokeStyle = "red";
+    cant.lineWidth= 3;
+    cant.strokeRect(270,20,150,80);
+
+    cant.clearReact(30,30,30,30)
+    //circle
+     cant.beginPath();
+     cant.arc(100,200,50,0,Math.PI);
+     cant.fillStyle = "red";
+     cant.fill();
+     //Text on canvas
+     cant.font = "24px Arial";
+     cant.fillStyle="#fff"
+     cant.fillText("hello Canvas", 30, 50);
+
+     
+</script>
+
+</body>
+</html>
