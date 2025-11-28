@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="increaseID">Increase Id</button>
+    <p id="countValue">0</p>
+
+
+    <script>
+
+const btn = document.getElementById("increaseID")
+const val = document.getElementById("countValue")
+
+let count = localStorage.getItem('countVal') ? localStorage.getItem('countVal') :0;
+val.textContent = count;
+btn.addEventListener("click", function(){
+    count++;
+    val.textContent =count; 
+    localStorage.setItem('countVal', count)   
+});
+
+    </script>
+</body>
+</html>
