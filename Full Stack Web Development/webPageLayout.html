@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web page layout Design</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: rgb(237, 214, 237);
+            color: black;
+        }
+        header{
+            background: linear-gradient(135deg, #EEAECA, #94BBE9);
+            color: black;
+            padding: 18px 0;
+            box-shadow: 0 px 20px rgba(0,0,0,0.5);
+            position: sticky;
+            top: 0;
+        }
+
+        .container{
+            max-width: 100%;
+            display: block;
+            padding: 0 25px;
+        }
+        .header-inner{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        .logo{
+            font-weight: 800;
+            font-size: 22px;
+            letter-spacing: 2px;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        nav li a{
+            padding-bottom: 5px;
+            border-bottom: none;
+            opacity: 0.5;
+            transition: border-bottom  0.2s ease, opacity 0.2s ease;
+        }
+        nav li a:hover{
+            border-bottom: 2px solid #fff;
+            opacity: 1;
+        }
+
+        .cta-btn{
+            background: #fff;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+
+        }
+         /* section hero */
+         .hero h1{
+                font-size: 20px;
+                margin-bottom: 10px;
+                }
+        .hero h1 span{
+            color: red;
+        }
+        .hero p{
+            font-size: 15px;
+            max-width: 460px;
+            color: #444;
+        }
+        .hero-inner{
+            display: flex;
+            grid-template-columns: 1.4fr 1fr;
+            align-items: center;
+            gap: 32px;
+
+        }
+
+        .badge{
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(17, 44, 177,0.1);
+        }
+        .hero-actions{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .btn-outline{
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 1px solid #cfd3ff;
+            background: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-outline span{
+            font-size:17px;
+            color: rgb(0,33,177);
+        }
+        .hero-card{
+                background: #fff;
+                border-radius: 18px;
+                padding: 20px 18px;
+                box-shadow: 0 16px 40px rgba(15,  blue, alpha);
+        }
+        .hero-card h3{
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .hero-card p{
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .hero-states{
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            font-size: 14px;
+        }
+        .hero-state{
+            flex: 1;
+        }
+        .hero-state strong{
+            display: block;
+            font-size: 18px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner"  >
+            <div class="logo">LOGO</div>
+            <nav>
+                <ul>
+                    <li> <a href="#">Overview</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                
+            </nav>
+            <button class="cta-btn" type="button">Get Started</button>
+        </div> 
+    </header>
+
+    <section class="hero">
+        <div class="container hero-inner">
+            <div>
+                <div class="badge">
+                    HTML5 Semantic Layout
+                </div>
+                <h1>Build a <span> complete webpage layout </span> using clean THML5 Structure tags</h1>
+                <p>This is a layout [age. It shows how to use header, nav, sectin , article, aside , footer togeather with moderm css to create a structure layout.</p>
+                <div class="hero-actions">
+                    <button class="cta-btn" type="button">View Code</button>
+                    <button type="button" class="btn-outline"><span>&#9654;</span> Watch Live Calsses</button>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <h3>Class Summery</h3>
+                <p>Today you will learn how to convert a simple idea into a real webpage layout using only HTML5  and CSS</p>
+
+                <div class="hero-states">
+                    <div class="hero-state">
+                        <strong>6</strong>
+                        Structure Tags
+                    </div>
+                    <div class="hero-state">
+                        <strong>1</strong>
+                        Responsive Layout
+                    </div>
+                    <div class="hero-state">
+                        <strong>30 Min</strong>
+                        Approx. Build Time
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
