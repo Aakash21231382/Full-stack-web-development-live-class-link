@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+
+        }
+        body{
+            font-family: sans-serif;
+            background: #fff;
+            padding: 20px;
+        }
+        h1{
+            font-size: 22px;
+            text-align: center;
+            border-bottom: 1px solid black;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        table{
+            width: 60%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: aliceblue;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0, 0, 0.2);
+        }
+        th, td{
+            border: 1px solid #e6d8d8;
+            padding: 12px;
+            text-align: left;
+            
+        }
+        th{
+            background:tomato;
+        }
+    </style>
+</head>
+<body>
+  <div>
+    <h1> Submitted Student Details </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Fied</th>
+                <th>Information</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Full Name</td>
+                <td class="student-value" id="name"></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td class="student-value" id="age"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td class="student-value" id="email"></td>
+            </tr>
+            <tr>
+                <td>Course</td>
+                <td class="student-value" id="course"></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <script>
+        const urlPara = new URLSearchParams(window.location.search);
+        document.getElementById("name").textContent= urlPara.get("name")
+        document.getElementById("age").textContent= urlPara.get("age")
+        document.getElementById("email").textContent= urlPara.get("email")
+        document.getElementById("course").textContent= urlPara.get("course")
+    </script>
+</body>
+</html>
