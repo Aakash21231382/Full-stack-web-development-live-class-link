@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Table</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20;
+            background: pink;
+        }
+        h1{
+            text-align: center;
+            border-bottom: 2px solid black;
+            padding-bottom: 20px;
+
+        }
+        table{
+            width: 60%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0, 0, 0.2);
+        }
+        th, td{
+            border: 1px solid #e6d8d8;
+            padding: 12px;
+            text-align: left;
+            
+        }
+        th{
+            background:rgb(240, 136, 118);
+        }
+    </style>
+</head>
+<body>
+     <div>
+        <h1> Submitted Student Details</h1>
+        <table>
+            <thead>
+                <th>Field </th>
+                <th>Information</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td class="student-value" id="name"></td>
+                </tr>
+                <tr>
+                    <td>Roll No</td>
+                    <td class="student-value" id="roll"></td>
+                </tr>
+                <tr>
+                    <td>Father Name</td>
+                    <td class="student-value" id="father"></td>
+                </tr>
+                <tr>
+                    <td>Date of birth</td>
+                    <td class="student-value" id="birth"></td>
+                </tr>
+                <tr>
+                    <td>Mobile No</td>
+                    <td class="student-value" id="phone"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td class="student-value" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td class="student-value" id="password"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td class="student-value" id="gender"></td>
+                </tr>
+                <tr>
+                    <td>Course</td>
+                    <td class="student-value" id="course"></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td class="student-value" id="city"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td class="student-value" id="address"></td>
+                </tr>
+            </tbody>
+        </table>
+     </div>
+
+     <script>
+        const resRegistration = new URLSearchParams(window.location.search);
+        
+        document.getElementById("name").textContent=resRegistration.get("name")
+        document.getElementById("roll").textContent=resRegistration.get("roll")
+        document.getElementById("father").textContent=resRegistration.get("father")
+        document.getElementById("birth").textContent=resRegistration.get("birth")
+        document.getElementById("phone").textContent=resRegistration.get("phone")
+        document.getElementById("email").textContent=resRegistration.get("email")
+        document.getElementById("password").textContent=resRegistration.get("password")
+        document.getElementById("gender").textContent=resRegistration.get("gender")
+        document.getElementById("course").textContent=resRegistration.get("course")
+        document.getElementById("city").textContent=resRegistration.get("city")
+        document.getElementById("address").textContent=resRegistration.get("address")
+     </script>
+</body>
+</html>
