@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display position in css</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            background: green;
+            margin-bottom: 10px;
+            /*display: block;
+            width: 300px;
+            height: 200px;
+            display: inline;*/
+
+        }
+        .card{
+            width: 150px;
+            height: 100px;
+            background-color: aquamarine;
+            display: inline-block;
+        }
+        
+        .parent{
+            width: 1100px;
+            height: 700px;
+            background: #b8b1b1;
+            margin: auto;
+            display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 20px;
+         
+
+        }
+        .flexbox{
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!-- <span class="box display-none">Box1</span>
+    <span class="box">Box2</span>
+    <span class="box">Box3</span>
+
+    <div class="card">
+        Welcome
+    </div> -->
+    <div class="parent">
+        <div class="flexbox">box-1</div>
+        <div class="flexbox">box-2</div>
+        <div class="flexbox">box-3</div>
+        <div class="flexbox">box-4</div>
+        <div class="flexbox">box-5</div>
+    </div>
+</body>
+</html>

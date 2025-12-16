@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+            background: #e8abab;
+            padding: 40px;
+        }
+        .card{
+            width: 280px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: auto;
+            box-sizing: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        .card img{
+            width: 100%;
+            display: block;
+            border-radius: inherit;
+        }
+        .card-content{
+            padding: 15px;
+            padding-top: 0;
+        }
+        .card-content h3{
+            font-size: 18px;
+        }
+        .card-content p{
+            font-size: 14px;
+            color: #474747;
+        }
+        .price{
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .btn{
+            display: block;
+            text-align: center;
+            background-color: #e8abab;
+            padding: 8px 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://codecoreweb.com/images/courses/full-stack.svg" alt="">
+        <div class="card-content">
+            <h3>Complete full-stack web Developer</h3>
+            <p>Live + Recording Session</p>
+            <div class="price">
+                Rs. 999
+            </div>
+            <a href="#" class="btn">Add to Cart</a>
+        </div>
+    </div>
+</body>
+</html>
