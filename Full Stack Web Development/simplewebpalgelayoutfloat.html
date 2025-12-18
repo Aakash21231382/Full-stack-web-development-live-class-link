@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=", initial-scale="1.0">
+    <title>float and clear project in css    </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        header{
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        .container{
+            width: 90%;
+            margin: 20px auto;
+        }
+        .sidebar{
+            width: 30%;
+            float: left;
+            background: #d2aeae;
+            padding: 20px;
+            height: 200px;
+            text-align: center;
+        }
+        .content{
+            width: 70%;
+            float: left;
+            background: #e16666;
+            height: 200px;
+            padding: 20px;
+        }
+        .clear{
+            clear: both;
+        }
+        footer{
+            background: #333;
+            color: #fff;
+            text-align: center;
+            height: 100px;
+            align-items: center;
+           padding: 40px;
+           font-size: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+    </header>
+    <section class="container">
+        <aside class="sidebar">
+            SliderBar
+        </aside>
+        <main class="content">
+            Main Area Contant
+        </main>
+        <div class="clear"></div>
+    </section>
+    <footer >
+        Footer Section
+    </footer>
+
+</body>
+</html>
